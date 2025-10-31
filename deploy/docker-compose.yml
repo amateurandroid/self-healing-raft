@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  node1:
+    image: self-healing-raft:dev
+    container_name: raft-node1
+    command: ["1", "8080"]
+    ports:
+      - "8080:8080"
+
+  node2:
+    image: self-healing-raft:dev
+    container_name: raft-node2
+    command: ["2", "8081"]
+    ports:
+      - "8081:8081"
+
+  node3:
+    image: self-healing-raft:dev
+    container_name: raft-node3
+    command: ["3", "8082"]
+    ports:
+      - "8082:8082"
