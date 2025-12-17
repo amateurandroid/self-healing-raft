@@ -1,0 +1,5 @@
+server
+.DS_Store
+__pycache__/
+deploy/__pycache__/
+*.csv

@@ -1,23 +1,124 @@
-version: "3.9"
+version: "3"
 
 services:
+  # --- Nodes 1 to 3 (Original) ---
   node1:
-    image: self-healing-raft:dev
-    container_name: raft-node1
-    command: ["1", "8080"]
-    ports:
-      - "8080:8080"
+    build:
+      context: ../
+      dockerfile: deploy/Dockerfile
+    container_name: node1
+    command: ["server", "1", "8080"]
+    ports: ["8080:8080"]
 
   node2:
-    image: self-healing-raft:dev
-    container_name: raft-node2
-    command: ["2", "8081"]
-    ports:
-      - "8081:8081"
+    build:
+      context: ../
+      dockerfile: deploy/Dockerfile
+    container_name: node2
+    command: ["server", "2", "8081"]
+    ports: ["8081:8081"]
 
   node3:
-    image: self-healing-raft:dev
-    container_name: raft-node3
-    command: ["3", "8082"]
-    ports:
-      - "8082:8082"
+    build:
+      context: ../
+      dockerfile: deploy/Dockerfile
+    container_name: node3
+    command: ["server", "3", "8082"]
+    ports: ["8082:8082"]
+
+  # --- Nodes 4 to 15 (New) ---
+  node4:
+    build:
+      context: ../
+      dockerfile: deploy/Dockerfile
+    container_name: node4
+    command: ["server", "4", "8083"]
+    ports: ["8083:8083"]
+
+  node5:
+    build:
+      context: ../
+      dockerfile: deploy/Dockerfile
+    container_name: node5
+    command: ["server", "5", "8084"]
+    ports: ["8084:8084"]
+
+  node6:
+    build:
+      context: ../
+      dockerfile: deploy/Dockerfile
+    container_name: node6
+    command: ["server", "6", "8085"]
+    ports: ["8085:8085"]
+
+  node7:
+    build:
+      context: ../
+      dockerfile: deploy/Dockerfile
+    container_name: node7
+    command: ["server", "7", "8086"]
+    ports: ["8086:8086"]
+
+  node8:
+    build:
+      context: ../
+      dockerfile: deploy/Dockerfile
+    container_name: node8
+    command: ["server", "8", "8087"]
+    ports: ["8087:8087"]
+
+  node9:
+    build:
+      context: ../
+      dockerfile: deploy/Dockerfile
+    container_name: node9
+    command: ["server", "9", "8088"]
+    ports: ["8088:8088"]
+
+  node10:
+    build:
+      context: ../
+      dockerfile: deploy/Dockerfile
+    container_name: node10
+    command: ["server", "10", "8089"]
+    ports: ["8089:8089"]
+
+  node11:
+    build:
+      context: ../
+      dockerfile: deploy/Dockerfile
+    container_name: node11
+    command: ["server", "11", "8090"]
+    ports: ["8090:8090"]
+
+  node12:
+    build:
+      context: ../
+      dockerfile: deploy/Dockerfile
+    container_name: node12
+    command: ["server", "12", "8091"]
+    ports: ["8091:8091"]
+
+  node13:
+    build:
+      context: ../
+      dockerfile: deploy/Dockerfile
+    container_name: node13
+    command: ["server", "13", "8092"]
+    ports: ["8092:8092"]
+
+  node14:
+    build:
+      context: ../
+      dockerfile: deploy/Dockerfile
+    container_name: node14
+    command: ["server", "14", "8093"]
+    ports: ["8093:8093"]
+
+  node15:
+    build:
+      context: ../
+      dockerfile: deploy/Dockerfile
+    container_name: node15
+    command: ["server", "15", "8094"]
+    ports: ["8094:8094"]
