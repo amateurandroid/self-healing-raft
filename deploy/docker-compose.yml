@@ -1,7 +1,6 @@
 version: "3"
 
 services:
-  # --- Nodes 1 to 3 (Original) ---
   node1:
     build:
       context: ../
@@ -9,6 +8,8 @@ services:
     container_name: node1
     command: ["server", "1", "8080"]
     ports: ["8080:8080"]
+    environment:
+      - RAFT_MODE    # passed through from run_trials.py; unset = adaptive
 
   node2:
     build:
@@ -17,6 +18,8 @@ services:
     container_name: node2
     command: ["server", "2", "8081"]
     ports: ["8081:8081"]
+    environment:
+      - RAFT_MODE    # passed through from run_trials.py; unset = adaptive
 
   node3:
     build:
@@ -25,8 +28,9 @@ services:
     container_name: node3
     command: ["server", "3", "8082"]
     ports: ["8082:8082"]
+    environment:
+      - RAFT_MODE    # passed through from run_trials.py; unset = adaptive
 
-  # --- Nodes 4 to 15 (New) ---
   node4:
     build:
       context: ../
@@ -34,6 +38,8 @@ services:
     container_name: node4
     command: ["server", "4", "8083"]
     ports: ["8083:8083"]
+    environment:
+      - RAFT_MODE    # passed through from run_trials.py; unset = adaptive
 
   node5:
     build:
@@ -42,6 +48,8 @@ services:
     container_name: node5
     command: ["server", "5", "8084"]
     ports: ["8084:8084"]
+    environment:
+      - RAFT_MODE    # passed through from run_trials.py; unset = adaptive
 
   node6:
     build:
@@ -50,6 +58,8 @@ services:
     container_name: node6
     command: ["server", "6", "8085"]
     ports: ["8085:8085"]
+    environment:
+      - RAFT_MODE    # passed through from run_trials.py; unset = adaptive
 
   node7:
     build:
@@ -58,6 +68,8 @@ services:
     container_name: node7
     command: ["server", "7", "8086"]
     ports: ["8086:8086"]
+    environment:
+      - RAFT_MODE    # passed through from run_trials.py; unset = adaptive
 
   node8:
     build:
@@ -66,6 +78,8 @@ services:
     container_name: node8
     command: ["server", "8", "8087"]
     ports: ["8087:8087"]
+    environment:
+      - RAFT_MODE    # passed through from run_trials.py; unset = adaptive
 
   node9:
     build:
@@ -74,6 +88,8 @@ services:
     container_name: node9
     command: ["server", "9", "8088"]
     ports: ["8088:8088"]
+    environment:
+      - RAFT_MODE    # passed through from run_trials.py; unset = adaptive
 
   node10:
     build:
@@ -82,6 +98,8 @@ services:
     container_name: node10
     command: ["server", "10", "8089"]
     ports: ["8089:8089"]
+    environment:
+      - RAFT_MODE    # passed through from run_trials.py; unset = adaptive
 
   node11:
     build:
@@ -90,6 +108,8 @@ services:
     container_name: node11
     command: ["server", "11", "8090"]
     ports: ["8090:8090"]
+    environment:
+      - RAFT_MODE    # passed through from run_trials.py; unset = adaptive
 
   node12:
     build:
@@ -98,6 +118,8 @@ services:
     container_name: node12
     command: ["server", "12", "8091"]
     ports: ["8091:8091"]
+    environment:
+      - RAFT_MODE    # passed through from run_trials.py; unset = adaptive
 
   node13:
     build:
@@ -106,6 +128,8 @@ services:
     container_name: node13
     command: ["server", "13", "8092"]
     ports: ["8092:8092"]
+    environment:
+      - RAFT_MODE    # passed through from run_trials.py; unset = adaptive
 
   node14:
     build:
@@ -114,6 +138,8 @@ services:
     container_name: node14
     command: ["server", "14", "8093"]
     ports: ["8093:8093"]
+    environment:
+      - RAFT_MODE    # passed through from run_trials.py; unset = adaptive
 
   node15:
     build:
@@ -122,3 +148,5 @@ services:
     container_name: node15
     command: ["server", "15", "8094"]
     ports: ["8094:8094"]
+    environment:
+      - RAFT_MODE    # passed through from run_trials.py; unset = adaptive
